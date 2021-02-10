@@ -2,8 +2,6 @@ package com.example.demo.controller;
 
 import java.util.ArrayList;
 import java.util.Random;
-
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,7 +29,7 @@ public class HelloWebService {
 		return new ResponseEntity<ArrayList<Student>>(listofStudents,HttpStatus.OK);
 		
 	}
-	
+	//creating the students
 	@PostMapping("/student")
 	public ResponseEntity createStudent(@RequestBody Student std) {
 		std.setRollNo(new Random().nextLong());
